@@ -1,0 +1,67 @@
+<TABLE width = 75% align="center" background="colourBoxBeige2">
+            <TR>
+                <TD width="33%">
+                    <h>
+                        Here it From the People
+                    </h>
+                    
+                </TD>
+                <TD width="66%">
+                    <!-- Slideshow container -->
+                    
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="imageThree" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="colourBoxBeige" width="453px" height="565px">
+                            <div class="text">The BEST photographer for all your photography needs - engagement, wedding, family shots, and more! She is very professional, kind, and always makes your sessions feel magical. She did our prom, engagment and wedding photos and we are still obsessed! She will always try her best to turn your visions int a reality. Would highly recommend. <br><br> -Brielle + Zach</div>
+                        </div>
+            
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="imageFour" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="colourBoxBeige" width="453px" height="565px">
+                            <div class="text">Amazing photographer, truly cares about her clients and allows them to have an awesome time while taking beautiful photos. Truly captures the natural beauty. <br><br> -Manda</div>
+                        </div>
+            
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="imageFive" style="width:100%">
+                        </div>
+            
+                        <div class="mySlides fade">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="colourBoxBeige" width="453px" height="565px">
+                            <div class="text">Good friend, fun hikes, makes me look good in pictures, 10/10. <br><br> -Kat </div>
+                        </div>
+            
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+            
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div> 
+                </TD>
+            </TR>
+        </TABLE>
+
+        <script src="slideshowScript.js"></script> 
