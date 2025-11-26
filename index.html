@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Small Town Coffee Roastery</title>
+  <title>Small Town Roastery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts: Cormorant Garamond + Allura -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
-      /* Ceramix-inspired clay + coffee palette */
-      --bg-page: #f5f2ee;
-      --bg-light: #fbf8f4;
-      --bg-panel: #ffffff;
-      --clay: #e7d7c7;
-      --border-soft: #d6cec4;
-      --ink-main: #26221c;
-      --ink-muted: #837867;
-      --accent: #c47a4f;
-      --accent-deep: #814322;
+      /* Palette from your logo */
+      --bg-page: #d9c9b8;      /* warm beige */
+      --bg-light: #efe3d6;     /* lighter beige */
+      --bg-panel: #fffaf4;     /* cream */
+      --border-soft: #c5b3a0;
+      --ink-main: #4b4037;     /* line-art brown */
+      --ink-muted: #8f7a67;
+      --accent: #b8865b;       /* coffee accent */
+      --accent-deep: #8c5f3d;  /* darker coffee */
       --radius-xl: 32px;
       --radius-md: 18px;
       --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.12);
@@ -49,6 +55,21 @@
       text-decoration: underline;
     }
 
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    .section-title,
+    .bean-name,
+    .brand-text h1 {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+    }
+
+    .script-accent {
+      font-family: "Allura", cursive;
+      letter-spacing: 0.04em;
+    }
+
     .site {
       max-width: 1120px;
       margin: 0 auto;
@@ -65,7 +86,7 @@
       margin-bottom: 24px;
       border-radius: 999px;
       border: 1px solid var(--border-soft);
-      background: rgba(251, 248, 244, 0.9);
+      background: rgba(255, 250, 244, 0.92);
       backdrop-filter: blur(12px);
       position: sticky;
       top: 10px;
@@ -83,7 +104,7 @@
       height: 48px;
       border-radius: 16px;
       border: 1px solid var(--border-soft);
-      background: #f0e4d7;
+      background: var(--bg-page);
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -91,11 +112,10 @@
     .logo-block img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
 
     .brand-text h1 {
-      font-family: "Georgia", "Times New Roman", serif;
       font-size: 1rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -154,7 +174,7 @@
     .hero {
       margin-top: 30px;
       border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #f1e4d8 0, #fbf8f4 60%, #ffffff 100%);
+      background: radial-gradient(circle at top left, #efe3d6 0, #fffaf4 55%, #ffffff 100%);
       box-shadow: var(--shadow-soft);
       padding: 40px 32px 32px;
       display: grid;
@@ -171,10 +191,10 @@
     }
 
     .hero-text h2 {
-      font-family: "Georgia", "Times New Roman", serif;
       font-size: clamp(2rem, 3vw, 2.4rem);
       line-height: 1.15;
       margin-bottom: 10px;
+      color: var(--ink-main);
     }
 
     .hero-text p {
@@ -195,8 +215,8 @@
       font-size: 0.78rem;
       padding: 6px 12px;
       border-radius: 999px;
-      background: #efe2d3;
-      border: 1px solid #dfd0c0;
+      background: #efe3d6;
+      border: 1px solid var(--border-soft);
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--ink-muted);
@@ -223,7 +243,7 @@
     }
 
     .btn-primary:hover {
-      background: #5c2f17;
+      background: #6f4528;
     }
 
     .hero-note {
@@ -257,21 +277,13 @@
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid var(--border-soft);
-      background: #e4d3c3;
+      background: #e0d0c2;
     }
 
     .hero-sub-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .hero-label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--ink-muted);
-      margin-top: 4px;
     }
 
     /* SECTION WRAPPER */
@@ -292,9 +304,9 @@
     }
 
     .section-title {
-      font-family: "Georgia", "Times New Roman", serif;
       font-size: 1.6rem;
       margin-top: 4px;
+      color: var(--ink-main);
     }
 
     /* STORY SECTION */
@@ -391,7 +403,6 @@
     }
 
     .bean-name {
-      font-family: "Georgia", "Times New Roman", serif;
       font-size: 1rem;
       margin-bottom: 4px;
     }
@@ -453,6 +464,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      color: var(--ink-main);
     }
 
     .faq-question span.icon {
@@ -470,8 +482,8 @@
     }
 
     .faq-item.open {
-      background: #f8f1ea;
-      border-color: #e2d3c3;
+      background: #f3e4d4;
+      border-color: #d9c3ae;
     }
 
     .faq-item.open .faq-answer {
@@ -527,7 +539,7 @@
     .insta-wrapper {
       border-radius: var(--radius-xl);
       padding: 26px 22px 22px;
-      background: #faf7f3;
+      background: var(--bg-panel);
       border: 1px solid var(--border-soft);
     }
 
@@ -595,6 +607,107 @@
       padding: 8px 10px;
     }
 
+    /* CONTACT SECTION */
+
+    .contact-section {
+      margin-top: 54px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-copy {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+    }
+
+    .contact-copy p + p {
+      margin-top: 10px;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-panel);
+      padding: 20px 18px 18px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-card-title {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-card-sub {
+      font-size: 0.86rem;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+    }
+
+    form.contact-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.86rem;
+    }
+
+    .field-group label {
+      color: var(--ink-main);
+    }
+
+    .field-group input,
+    .field-group textarea {
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      padding: 8px 11px;
+      font-size: 0.86rem;
+      outline: none;
+      background: var(--bg-light);
+      color: var(--ink-main);
+    }
+
+    .field-group textarea {
+      border-radius: 16px;
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .field-group input:focus,
+    .field-group textarea:focus {
+      border-color: var(--accent-deep);
+      box-shadow: 0 0 0 1px rgba(140, 95, 61, 0.15);
+    }
+
+    .contact-small {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      margin-top: 6px;
+    }
+
+    .contact-submit {
+      margin-top: 6px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .contact-submit .btn-primary {
+      padding-inline: 20px;
+    }
+
     /* FOOTER */
 
     footer {
@@ -611,12 +724,12 @@
     <header>
       <div class="brand">
         <div class="logo-block">
-          <!-- Replace with your actual square logo -->
-          <img src="logo-smalltowncoffeeroastery.png" alt="Small Town Coffee Roastery logo" />
+          <!-- Use your logo image here -->
+          <img src="images/logo.png" alt="Small Town Roastery logo" />
         </div>
         <div class="brand-text">
-          <h1>Small Town Coffee Roastery</h1>
-          <span>Langton, Ontario · Small-batch, locally roasted coffee</span>
+          <h1>Small Town Roastery</h1>
+          <span class="script-accent">fresh mornings, small-town pace</span>
         </div>
       </div>
       <nav>
@@ -624,22 +737,23 @@
         <a href="#story">Our Story</a>
         <a href="#faq">FAQ</a>
         <a href="#instagram">Instagram</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="hero-text">
-        <h2>Calm, small-town coffee. Freshly roasted for your morning.</h2>
+        <h2>Soft, small-town mornings. Freshly roasted coffee.</h2>
         <p>
-          We roast in small batches so your beans taste like they came from a friend,
-          not a factory. This site is here to show you what we roast and answer the
-          questions we get all the time in our DMs.
+          We roast in small batches so your coffee feels calm and cozy, not rushed.
+          This page shows you what we roast, how to order, and answers the questions
+          that usually land in our Instagram DMs.
         </p>
         <div class="hero-tags">
           <span class="hero-tag">Small-batch</span>
           <span class="hero-tag">Locally roasted</span>
-          <span class="hero-tag">Made with care</span>
+          <span class="hero-tag">Easy to order</span>
         </div>
         <div class="hero-cta">
           <button class="btn-primary" onclick="document.getElementById('beans').scrollIntoView({behavior: 'smooth'})">
@@ -656,15 +770,15 @@
       <div class="hero-media">
         <div class="hero-main-img">
           <!-- Big hero image of bags / pour over -->
-          <img src="hero-main.jpg" alt="Bags of freshly roasted coffee and a pour-over setup" />
+          <img src="images/pourover.png" alt="Bags of freshly roasted coffee and a pour-over setup" />
         </div>
         <div class="hero-sub-img">
           <!-- Close-up beans or latte art -->
-          <img src="hero-detail-1.jpg" alt="Coffee beans close-up in a ceramic bowl" />
+          <img src="images/coofeebowl.png" alt="Coffee beans in a ceramic bowl" />
         </div>
         <div class="hero-sub-img">
           <!-- Roaster or scale shot -->
-          <img src="hero-detail-2.jpg" alt="Freshly roasted coffee cooling in the roaster" />
+          <img src="images/roasting.png" alt="Freshly roasted coffee cooling in the roaster" />
         </div>
       </div>
     </section>
@@ -678,15 +792,15 @@
       <div class="story">
         <div class="story-text">
           <p>
-            Small Town Coffee Roastery started as a way to bring better coffee
-            into quiet Ontario mornings. We roast in small batches, pay attention
-            to the little details, and keep our operation intentionally small so
-            we can stay close to the people drinking our coffee.
+            Small Town Roastery started as a way to bring better coffee into quiet
+            Ontario mornings. We roast in small batches, pay attention to the little
+            details, and keep things intentionally small so we can stay close to the
+            people drinking our coffee.
           </p>
           <p>
             Most of our orders still come through Instagram messages, texts, and
-            conversations at local spots. If you’re reading this, you’re probably
-            one of those people — and we’re really glad you’re here.
+            chats at local spots. If you’ve found this page, you’re probably
+            already one of those people — and we’re really glad you’re here.
           </p>
         </div>
         <aside class="story-panel">
@@ -695,7 +809,7 @@
             <li>Fresh, balanced coffee that feels cozy, not snobby.</li>
             <li>Roast profiles that highlight sweetness and comfort.</li>
             <li>Keeping it local, small, and easy to order.</li>
-            <li>Helping you brew better at home, whatever setup you have.</li>
+            <li>Helping you brew better at home, with any setup.</li>
           </ul>
         </aside>
       </div>
@@ -717,7 +831,7 @@
         <!-- Card 1 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-1.jpg" alt="Bag of medium roast coffee on a wooden table" />
+            <img src="images/bag.png" alt="Bag of medium roast coffee on a wooden table" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Small Town House</h3>
@@ -732,7 +846,7 @@
         <!-- Card 2 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-2.jpg" alt="Light roast beans in a ceramic bowl" />
+            <img src="images/bag.png" alt="Light roast beans in a ceramic bowl" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Morning Light</h3>
@@ -747,7 +861,7 @@
         <!-- Card 3 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-3.jpg" alt="Dark roast coffee in a mug and beans scattered" />
+            <img src="images/bag.png" alt="Dark roast coffee in a mug and beans scattered" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Campfire Dark</h3>
@@ -762,7 +876,7 @@
         <!-- Card 4 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-4.jpg" alt="Latte art in a ceramic cup" />
+            <img src="images/bag.png" alt="Latte art in a ceramic cup" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Milk &amp; Honey</h3>
@@ -777,7 +891,7 @@
         <!-- Card 5 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-5.jpg" alt="Bags of coffee stacked together" />
+            <img src="images/bag.png" alt="Bags of coffee stacked together" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Seasonal Single Origin</h3>
@@ -792,7 +906,7 @@
         <!-- Card 6 -->
         <article class="bean-card">
           <div class="bean-img">
-            <img src="bean-6.jpg" alt="Coffee brewing in a pour-over dripper" />
+            <img src="images/bag.png" alt="Coffee brewing in a pour-over dripper" />
           </div>
           <div class="bean-body">
             <h3 class="bean-name">Weekend Pour-over</h3>
@@ -817,7 +931,7 @@
           <div class="faq-panel" id="faqList">
             <article class="faq-item open">
               <button class="faq-question" type="button">
-                <span>How do I order beans from Small Town Coffee Roastery?</span>
+                <span>How do I order beans from Small Town Roastery?</span>
                 <span class="icon">›</span>
               </button>
               <div class="faq-answer">
@@ -947,28 +1061,28 @@
         <!-- Manual grid of recent posts (replace images + links with your own) -->
         <div class="insta-grid">
           <a class="insta-item" href="https://www.instagram.com/p/POST1/" target="_blank" rel="noopener">
-            <img src="ig-1.jpg" alt="Recent Instagram post 1 from Small Town Coffee Roastery" />
+            <img src="ig-1.jpg" alt="Recent Instagram post 1 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST2/" target="_blank" rel="noopener">
-            <img src="ig-2.jpg" alt="Recent Instagram post 2 from Small Town Coffee Roastery" />
+            <img src="ig-2.jpg" alt="Recent Instagram post 2 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST3/" target="_blank" rel="noopener">
-            <img src="ig-3.jpg" alt="Recent Instagram post 3 from Small Town Coffee Roastery" />
+            <img src="ig-3.jpg" alt="Recent Instagram post 3 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST4/" target="_blank" rel="noopener">
-            <img src="ig-4.jpg" alt="Recent Instagram post 4 from Small Town Coffee Roastery" />
+            <img src="ig-4.jpg" alt="Recent Instagram post 4 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST5/" target="_blank" rel="noopener">
-            <img src="ig-5.jpg" alt="Recent Instagram post 5 from Small Town Coffee Roastery" />
+            <img src="ig-5.jpg" alt="Recent Instagram post 5 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST6/" target="_blank" rel="noopener">
-            <img src="ig-6.jpg" alt="Recent Instagram post 6 from Small Town Coffee Roastery" />
+            <img src="ig-6.jpg" alt="Recent Instagram post 6 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST7/" target="_blank" rel="noopener">
-            <img src="ig-7.jpg" alt="Recent Instagram post 7 from Small Town Coffee Roastery" />
+            <img src="ig-7.jpg" alt="Recent Instagram post 7 from Small Town Roastery" />
           </a>
           <a class="insta-item" href="https://www.instagram.com/p/POST8/" target="_blank" rel="noopener">
-            <img src="ig-8.jpg" alt="Recent Instagram post 8 from Small Town Coffee Roastery" />
+            <img src="ig-8.jpg" alt="Recent Instagram post 8 from Small Town Roastery" />
           </a>
         </div>
 
@@ -988,14 +1102,103 @@
 
         <div class="insta-widget-placeholder">
           <!--
-            OPTIONAL: if you use a free Instagram widget like SnapWidget, LightWidget,
-            or an official Instagram embed, paste the iframe code here so your posts
-            auto-update. For example:
-
-            <iframe src="YOUR_WIDGET_EMBED_URL" style="border:0; width:100%; height:400px;" loading="lazy"></iframe>
+            OPTIONAL: if you use an Instagram widget (SnapWidget, LightWidget, etc.),
+            paste the iframe code here so your posts auto-update.
           -->
-          This grid uses static images. If you later set up an Instagram feed widget,
+          This grid uses static images. If you set up an Instagram feed widget later,
           paste its embed code here to make this section update automatically.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-header">
+        <div class="section-kicker">Contact</div>
+        <h2 class="section-title">Say hello or start an order.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p>
+            You can always DM us on Instagram, but if you’d rather send a quick
+            message here, fill out this form and it will land in our inbox.
+          </p>
+          <p>
+            Tell us what you’re looking for (beans, grind, quantity, pickup /
+            delivery area) and we’ll get back to you with options and details.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-title">Contact form</div>
+          <div class="contact-card-sub">
+            We’ll reply from <strong>smalltowncoffeeroastery@outlook.com</strong>.
+          </div>
+
+          <!--
+            Formspree:
+            1. Go to https://formspree.io
+            2. Create a form and copy the "form endpoint" URL
+            3. Replace the action below with that URL
+          -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <div class="field-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="_replyto"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="What would you like to order or ask?"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Optional: subject for Formspree emails -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from Small Town Roastery website"
+            />
+
+            <div class="contact-small">
+              You can also reach us directly at
+              <a href="mailto:smalltowncoffeeroastery@outlook.com">
+                smalltowncoffeeroastery@outlook.com
+              </a>.
+            </div>
+
+            <div class="contact-submit">
+              <button class="btn-primary" type="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -1007,7 +1210,7 @@
   </div>
 
   <script>
-    // Smooth scroll for nav links (for browsers that don't support CSS scroll-behavior fully)
+    // Smooth scroll for nav links
     document.querySelectorAll("nav a[href^='#']").forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
@@ -1023,11 +1226,9 @@
       btn.addEventListener("click", () => {
         const item = btn.closest(".faq-item");
         const isOpen = item.classList.contains("open");
-
         document.querySelectorAll(".faq-item.open").forEach((el) =>
           el.classList.remove("open")
         );
-
         if (!isOpen) item.classList.add("open");
       });
     });
