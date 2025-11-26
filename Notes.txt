@@ -1,0 +1,5 @@
+
+
+stuff to do:
+ - addd insta widget snap widget so it can work with new posts
+  - add formspree so the contact actually contacts their email
