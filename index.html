@@ -494,144 +494,10 @@
       transform: rotate(90deg);
     }
 
-    .faq-side {
+    /* Contact card inside FAQ */
+    .faq-contact-wrapper {
       font-size: 0.9rem;
       color: var(--ink-muted);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-soft);
-      background: var(--bg-panel);
-      padding: 14px 15px 12px;
-    }
-
-    .faq-search-wrap {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: var(--bg-light);
-      font-size: 0.86rem;
-    }
-
-    .faq-search-wrap input {
-      border: none;
-      outline: none;
-      background: transparent;
-      flex: 1;
-      font-size: 0.86rem;
-    }
-
-    .faq-side strong {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--ink-muted);
-    }
-
-    .faq-side p {
-      margin-top: 6px;
-    }
-
-    /* INSTAGRAM SECTION */
-
-    .insta-wrapper {
-      border-radius: var(--radius-xl);
-      padding: 26px 22px 22px;
-      background: var(--bg-panel);
-      border: 1px solid var(--border-soft);
-    }
-
-    .insta-grid {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .insta-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 600px) {
-      .insta-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .insta-item {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-soft);
-      background: #ddd;
-      position: relative;
-    }
-
-    .insta-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.25s ease;
-    }
-
-    .insta-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .insta-handle-row {
-      margin-top: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.86rem;
-      color: var(--ink-muted);
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .insta-handle-row a.btn-primary {
-      text-decoration: none;
-      padding: 7px 15px;
-      font-size: 0.8rem;
-    }
-
-    .insta-widget-placeholder {
-      margin-top: 14px;
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      border-radius: 14px;
-      border: 1px dashed var(--border-soft);
-      padding: 8px 10px;
-    }
-
-    /* CONTACT SECTION */
-
-    .contact-section {
-      margin-top: 54px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .contact-copy {
-      font-size: 0.95rem;
-      color: var(--ink-muted);
-    }
-
-    .contact-copy p + p {
-      margin-top: 10px;
     }
 
     .contact-card {
@@ -708,6 +574,32 @@
       padding-inline: 20px;
     }
 
+    /* INSTAGRAM SECTION */
+
+    .insta-wrapper {
+      border-radius: var(--radius-xl);
+      padding: 26px 22px 22px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-soft);
+    }
+
+    .insta-handle-row {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.86rem;
+      color: var(--ink-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .insta-handle-row a.btn-primary {
+      text-decoration: none;
+      padding: 7px 15px;
+      font-size: 0.8rem;
+    }
+
     /* FOOTER */
 
     footer {
@@ -724,7 +616,6 @@
     <header>
       <div class="brand">
         <div class="logo-block">
-          <!-- Use your logo image here -->
           <img src="images/logo.png" alt="Small Town Roastery logo" />
         </div>
         <div class="brand-text">
@@ -737,7 +628,6 @@
         <a href="#story">Our Story</a>
         <a href="#faq">FAQ</a>
         <a href="#instagram">Instagram</a>
-        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -769,15 +659,12 @@
       </div>
       <div class="hero-media">
         <div class="hero-main-img">
-          <!-- Big hero image of bags / pour over -->
           <img src="images/pourover.png" alt="Bags of freshly roasted coffee and a pour-over setup" />
         </div>
         <div class="hero-sub-img">
-          <!-- Close-up beans or latte art -->
           <img src="images/coofeebowl.png" alt="Coffee beans in a ceramic bowl" />
         </div>
         <div class="hero-sub-img">
-          <!-- Roaster or scale shot -->
           <img src="images/roasting.png" alt="Freshly roasted coffee cooling in the roaster" />
         </div>
       </div>
@@ -920,7 +807,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ + CONTACT -->
     <section class="section" id="faq">
       <div class="section-header">
         <div class="section-kicker">FAQ</div>
@@ -1019,33 +906,73 @@
             </article>
           </div>
         </div>
-        <aside class="faq-side">
-          <div class="faq-search-wrap">
-            <span>🔍</span>
-            <input
-              id="faqSearch"
-              type="text"
-              placeholder="Search: shipping, grind, wholesale..."
-              aria-label="Search FAQs"
-            />
+
+        <!-- CONTACT FORM now lives beside FAQ -->
+        <aside class="faq-contact-wrapper">
+          <div class="contact-card">
+            <div class="contact-card-title">Say hello or start an order.</div>
+            <div class="contact-card-sub">
+              Fill this out and we’ll reply from
+              <strong>smalltowncoffeeroastery@outlook.com</strong>.
+            </div>
+
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xkglngqk"
+              method="POST"
+            >
+              <div class="field-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="_replyto"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What would you like to order or ask?"
+                  required
+                ></textarea>
+              </div>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Small Town Roastery website"
+              />
+
+              <div class="contact-small">
+                You can also reach us directly at
+                <a href="mailto:smalltowncoffeeroastery@outlook.com">
+                  smalltowncoffeeroastery@outlook.com
+                </a>.
+              </div>
+
+              <div class="contact-submit">
+                <button class="btn-primary" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
-          <strong>Need more help?</strong>
-          <p>
-            If your question isn’t answered here, message us on Instagram and
-            mention this page. We can answer you one-on-one and, if it’s a
-            question lots of people ask, we’ll add it here too.
-          </p>
-          <p style="margin-top: 8px;">
-            Instagram:
-            <a href="https://www.instagram.com/smalltowncoffeeroastery" target="_blank" rel="noopener">
-              @smalltowncoffeeroastery
-            </a><br />
-            Email:
-            <a href="mailto:smalltowncoffeeroastery@outlook.com">
-              smalltowncoffeeroastery@outlook.com
-            </a><br />
-            Text / WhatsApp: 519-550-5381
-          </p>
         </aside>
       </div>
     </section>
@@ -1057,37 +984,18 @@
         <h2 class="section-title">See what’s roasting right now.</h2>
       </div>
 
-        <div class="insta-wrapper">
-        <div class="section-kicker">Instagram</div>
-        <h2 class="section-title">See what’s roasting right now.</h2>
-
+      <div class="insta-wrapper">
         <!-- Auto-updating Instagram feed widget -->
         <div style="margin-top: 16px;">
-            <iframe
+          <iframe
             src="https://snapwidget.com/embed/YOUR_WIDGET_ID"
             class="instagram-widget"
             allowtransparency="true"
             frameborder="0"
             scrolling="no"
             style="border:none; overflow:hidden; width:100%; max-width:100%; height:420px;"
-            ></iframe>
+          ></iframe>
         </div>
-
-        <div class="insta-handle-row">
-            <span>
-            Follow us for new roasts, behind-the-scenes, and what we’re brewing at home.
-            </span>
-            <a
-            class="btn-primary"
-            href="https://www.instagram.com/smalltowncoffeeroastery"
-            target="_blank"
-            rel="noopener"
-            >
-            Visit Instagram
-            </a>
-        </div>
-        </div>
-
 
         <div class="insta-handle-row">
           <span>
@@ -1101,107 +1009,6 @@
           >
             Visit Instagram
           </a>
-        </div>
-
-        <div class="insta-widget-placeholder">
-          <!--
-            OPTIONAL: if you use an Instagram widget (SnapWidget, LightWidget, etc.),
-            paste the iframe code here so your posts auto-update.
-          -->
-          This grid uses static images. If you set up an Instagram feed widget later,
-          paste its embed code here to make this section update automatically.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="section contact-section" id="contact">
-      <div class="section-header">
-        <div class="section-kicker">Contact</div>
-        <h2 class="section-title">Say hello or start an order.</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-copy">
-          <p>
-            You can always DM us on Instagram, but if you’d rather send a quick
-            message here, fill out this form and it will land in our inbox.
-          </p>
-          <p>
-            Tell us what you’re looking for (beans, grind, quantity, pickup /
-            delivery area) and we’ll get back to you with options and details.
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card-title">Contact form</div>
-          <div class="contact-card-sub">
-            We’ll reply from <strong>smalltowncoffeeroastery@outlook.com</strong>.
-          </div>
-
-          <!--
-            Formspree:
-            1. Go to https://formspree.io
-            2. Create a form and copy the "form endpoint" URL
-            3. Replace the action below with that URL
-          -->
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/xkglngqk"
-            method="POST"
-          >
-            <div class="field-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                required
-              />
-            </div>
-
-            <div class="field-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="_replyto"
-                placeholder="you@example.com"
-                required
-              />
-            </div>
-
-            <div class="field-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="What would you like to order or ask?"
-                required
-              ></textarea>
-            </div>
-
-            <!-- Optional: subject for Formspree emails -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="New message from Small Town Roastery website"
-            />
-
-            <div class="contact-small">
-              You can also reach us directly at
-              <a href="mailto:smalltowncoffeeroastery@outlook.com">
-                smalltowncoffeeroastery@outlook.com
-              </a>.
-            </div>
-
-            <div class="contact-submit">
-              <button class="btn-primary" type="submit">
-                Send Message
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </section>
@@ -1236,18 +1043,7 @@
       });
     });
 
-    // FAQ search
-    const faqSearchInput = document.getElementById("faqSearch");
-    const faqItems = Array.from(document.querySelectorAll(".faq-item"));
-
-    faqSearchInput.addEventListener("input", () => {
-      const term = faqSearchInput.value.toLowerCase().trim();
-      faqItems.forEach((item) => {
-        const text = item.textContent.toLowerCase();
-        const match = !term || text.includes(term);
-        item.classList.toggle("hidden", !match);
-      });
-    });
+    // FAQ search removal: we no longer have the search box, so no JS needed for it.
   </script>
 </body>
 </html>
